@@ -84,9 +84,9 @@ const Products = () => {
         p: 2,
       }}
     >
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box sx={{ display: "flex", justifyContent: "space-between", paddingX: '70px'}}>
         <Input
-          placeholder="Cari sesuatu ..."
+          placeholder="Cari produk..."
           name="search"
           type="text"
           onChange={searchFunction}

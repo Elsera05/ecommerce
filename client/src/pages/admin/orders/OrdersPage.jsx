@@ -11,7 +11,7 @@ const OrdersPage = () => {
 
   const { data } = useGetOrdersQuery();
 
-  const completeOrder = data?.filter((d) => d.paymentStatus === "settlement");
+  const completeOrder = data;
 
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -20,7 +20,7 @@ const OrdersPage = () => {
   };
 
   const filtered = (order) => {
-    return order.orderId.toLowerCase().includes(searchTerm.toLowerCase());
+    return order.user.name.toLowerCase().includes(searchTerm.toLowerCase());
   };
 
   const filteredOrders = completeOrder?.filter(filtered);

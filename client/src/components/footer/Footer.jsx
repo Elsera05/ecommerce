@@ -1,7 +1,9 @@
 import { Box } from "@mui/material";
+import { useGetStoreDataQuery } from "../../state/api/storeApi";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const { data: store } = useGetStoreDataQuery();
 
   return (
     <Box
@@ -12,7 +14,7 @@ const Footer = () => {
         alignItems: "center",
       }}
     >
-      &copy; Almagribi {year}
+      &copy; { store?.name } {year}
     </Box>
   );
 };

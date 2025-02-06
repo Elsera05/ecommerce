@@ -85,11 +85,7 @@ const Appbar = () => {
       <AppBar position="static">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box sx={{ cursor: "pointer" }} onClick={toHome}>
-            <img
-              src={store?.logo}
-              alt="logo"
-              style={{ height: "50px", width: "120px", objectFit: "contain" }}
-            />
+            <h1>{ store?.name }</h1>
           </Box>
 
           <Box sx={{ display: "flex", gap: 1 }}>
